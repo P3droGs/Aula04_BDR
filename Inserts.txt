@@ -1,0 +1,53 @@
+INSERT INTO CategoriaOcorrencia (codCategoria, nomeCategoria) VALUES
+(1, 'Incêndio'),
+(2, 'Alagamento'),
+(3, 'Acidente de Trânsito'),
+(4, 'Crime'),
+(5, 'Deslizamento de Terra'), 
+
+INSERT INTO Endereco (codEndereco, localDetalhado) VALUES
+(1, 'Rua das Flores, 123 - Centro'),
+(2, 'Avenida Brasil, 456 - Zona Norte'),
+(3, 'Travessa das Palmeiras, 789 - Zona Sul'),
+(4, 'Rua dos Andradas, 321 - Bairro Industrial'),
+(5, 'Estrada Velha, KM 15 - Zona Rural'),
+
+INSERT INTO Pessoa (codPessoa, nomeCompleto, emailContato, chaveAcesso) VALUES
+(1, 'João da Silva', 'joao.silva@example.com', 'abc123'),
+(2, 'Maria Oliveira', 'maria.oliveira@example.com', 'senhaSegura1'),
+(3, 'Carlos Pereira', 'carlos.p@example.com', 'chaveXYZ789'),
+(4, 'Ana Souza', 'ana.souza@example.com', 'minhaSenha456'),
+(5, 'Luiz Mendes', 'luiz.m@example.com', 'acesso@2025'),
+
+
+
+INSERT INTO StatusOcorrencia (codStatus, descricaoStatus) VALUES
+(1, 'Pendente'),
+(2, 'Em andamento'),
+(3, 'Resolvida'),
+(4, 'Cancelada'),
+
+INSERT INTO Ocorrencia (codOcorrencia, codCategoria, codEndereco, codStatus, momento, detalhes) VALUES
+(1, 1, 1, 1, '2025-08-18 14:30:00', 'Fogo iniciado em um poste elétrico'),
+(2, 2, 2, 2, '2025-08-17 10:15:00', 'Rua completamente alagada após forte chuva'),
+(3, 3, 3, 3, '2025-08-16 08:00:00', 'Colisão entre dois carros em cruzamento'),
+(4, 4, 4, 1, '2025-08-15 22:45:00', 'Assalto a mão armada em loja de conveniência'),
+(5, 5, 5, 3, '2025-08-14 06:20:00', 'Deslizamento após chuvas intensas'),
+
+
+INSERT INTO Registro (codRegistro, codOcorrencia, codPessoa, conteudo, dataRegistro) VALUES
+(1, 1, 1, 'Vi fogo saindo do transformador e chamei os bombeiros.', '2025-08-18 14:35:00'),
+(2, 2, 2, 'A água chegou até a metade das casas.', '2025-08-17 10:20:00'),
+(3, 3, 3, 'Testemunhei o acidente, os dois motoristas estavam em alta velocidade.', '2025-08-16 08:10:00'),
+(4, 4, 4, 'Liguei para a polícia assim que vi o roubo acontecer.', '2025-08-15 22:50:00'),
+(5, 5, 5, 'Houve um forte barulho antes do deslizamento. Moradores evacuaram a tempo.', '2025-08-14 06:25:00'),
+
+INSERT INTO Notificacao (codNotificacao, codOcorrencia, textoAviso, momentoAviso) VALUES
+(1, 1, 'Incêndio reportado no centro. Evite a região.', '2025-08-18 14:40:00'),
+(2, 2, 'Alagamento severo. Trânsito interrompido.', '2025-08-17 10:30:00'),
+(3, 3, 'Acidente de trânsito. Rota alternativa recomendada.', '2025-08-16 08:15:00'),
+(4, 4, 'Crime reportado. Aumente a vigilância na área.', '2025-08-15 23:00:00'),
+(5, 5, 'Deslizamento de terra. Evacuação em andamento.', '2025-08-14 06:30:00');
+
+
+
